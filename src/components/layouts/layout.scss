@@ -1,0 +1,33 @@
+@import "./reset.css";
+
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
+body {
+  border-top: darkblue solid 3rem;
+  border-bottom: darkblue solid 3rem;
+  box-sizing: border-box;
+}
+
+a {
+  color: darkblue;
+
+  &:hover {
+    color: blue;
+  }
+}
+
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+  margin: auto;
+  padding-bottom: 1rem;
+}

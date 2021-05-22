@@ -1,0 +1,18 @@
+.pokemonListItem {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto;
+  justify-items: center;
+
+  &__image {
+    height: 5rem;
+    align-self: center;
+    transition: all 0.1s 0.15s ease-in-out;
+  }
+
+  &:hover {
+    .pokemonListItem__image {
+      transform: scale(1.3);
+    }
+  }
+}

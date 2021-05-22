@@ -1,0 +1,36 @@
+.allPokemon {
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+
+  &__search {
+    display: flex;
+    align-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+
+    & > label {
+      line-height: 1.5;
+    }
+
+    & input {
+      margin-left: 1rem;
+    }
+
+    &__resultsCount {
+      line-height: 1.5;
+      margin-left: 1rem;
+      position: absolute;
+      right: -8rem;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    width: 100%;
+  }
+}

@@ -1,54 +1,45 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+## Pokedex GraphQL Site
 
-## 🚀 Quick start
+1.  **Welome**
 
-1.  **Create a Gatsby site.**
+    This is a simple site using GatsbyJS that consumes a GraphQL endpoint to display a list of Pokemon. The list can be filtered by name and each entry in the list can be opened to get more detail around the specific Pokemon.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+    The documentation for the tech and detail around any choices can be found below.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    [Live Demo](https://pokedex.davidvanzyl.io)
 
 2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into the root directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
+    cd pokedex/
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
-
     Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    To build the site, navigate into the root directory and run:
 
-4.  **Learn more**
+    ```shell
+    cd pokedex/
+    npm run build
+    ```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+3.  **Built With**
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Gatsby](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [graphql-pokeapi](https://graphql-pokemon2.vercel.app)
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+      Using GraphQL over Rest here means all required data is passed directly into the page context object in a single request, where property relationships are clearly defined in the request without the need for data manipulation leaving the overall method of fetching more scalable and easier to understand.
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [React-Virtualized](https://github.com/bvaughn/react-virtualized)
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+      Since the site is static all data is fetched at build time and so is held in memory regardless. Pagination might be superior here if that were not the case since only the items which were visable would need to be held in memory and loaded. By using a virtual list, we stil only render what is visable but make the navigation of the list seamless.
 
-## 🚀 Quick start (Gatsby Cloud)
+      One consideration here is that of course not all the list items and so not all the page links would render which would affect page crawlers/SEO. It's possible to detect crawls with userAgent and deliver a full render of the list.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+### Author
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+[David van Zyl](https://github.com/davidvanzyl)

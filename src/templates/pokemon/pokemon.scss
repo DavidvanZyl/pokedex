@@ -1,0 +1,15 @@
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  flex: 1;
+
+  & > * {
+    margin: 1rem 0;
+  }
+
+  &__image {
+    width: 10rem;
+  }
+}
