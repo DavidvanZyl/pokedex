@@ -17,7 +17,6 @@ const AllPokemon = ({ pageContext: { allPokemon } }) => {
   const [ref, setRef] = useState(null);
   const [columnCount, setColumnCount] = useState(1);
   const [filteredPokemon, setFilteredPokemon] = useState(null);
-  const [filteredPokemonCount, setFilteredPokemonCount] = useState(null);
 
   useEffect(() => {
     ref && ref.forceUpdate();
@@ -25,10 +24,6 @@ const AllPokemon = ({ pageContext: { allPokemon } }) => {
       setRef(null);
     };
   }, [columnCount]);
-
-  useEffect(() => {
-    filteredPokemon && setFilteredPokemonCount(filteredPokemon.length)
-  }, [filteredPokemon]);
 
   const getPokemonList = useCallback(
     () => filteredPokemon ? filteredPokemon : allPokemon,
@@ -70,7 +65,7 @@ const AllPokemon = ({ pageContext: { allPokemon } }) => {
             Search By Name:
             <input name="name" id="name" type="search" onChange={handleSearch} />
           </label>
-          {filteredPokemon && <p className="allPokemon__search__resultsCount">{filteredPokemonCount} results found.</p>}
+          {filteredPokemon && <p className="allPokemon__search__resultsCount">{filteredPokemon.length} results found.</p>}
         </div>
         <div className="allPokemon__list" data-testid="allPokemon-list">
           <AutoSizer onResize={handleOnResize}>
