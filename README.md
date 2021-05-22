@@ -14,6 +14,7 @@
 
     ```shell
     cd pokedex/
+    yarn install
     npm run develop
     ```
 
