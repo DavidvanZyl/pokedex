@@ -6,7 +6,7 @@
 
     The documentation for the tech and detail around any choices can be found below.
 
-    [Live Demo](https://pokedex.davidvanzyl.io)
+    [Live Demo](https://pokedex.davidvanzyl.me)
 
 2.  **Start developing.**
 
